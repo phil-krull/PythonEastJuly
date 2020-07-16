@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- based on the folder structure on the right -->
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style/index.css') }}">
+    <!-- linking a javascript file -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <!-- linking an image -->
+    
 </head>
 <body>
     <h1>Index html page</h1>
+    <img src="{{ url_for('static', filename='images/dojo.png') }}">
 </body>
 </html>

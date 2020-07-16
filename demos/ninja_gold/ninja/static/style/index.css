@@ -1,0 +1,35 @@
+div.container {
+    width: 970px;
+    margin: 0 auto;
+}
+h1 {
+    color: blue;
+}
+span {
+    border: 1px solid black;
+    padding: 2px 20px;
+}
+div.building {
+    border: 1px solid black;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 20px; 
+}
+div.building:first-of-type {
+    margin-left: 0;
+}
+div.activities {
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    height: 150px;
+    overflow-y: scroll;
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
