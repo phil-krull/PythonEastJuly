@@ -10,7 +10,7 @@
     <form action="/region" method="post">
         {% csrf_token %}
         <p>Name:</p>
-        <input type="text" name="form_name" id="" required>
+        <input type="text" name="form_name" id="">
         <br>
         <p>Latitude:</p>
         <input type="number" name="form_latitude" id="">
@@ -20,6 +20,13 @@
         <br>
         <button>Add Region</button>
     </form>
+    {% if messages %}
+        <ul class="messages">    
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+        </ul>
+    {% endif %}
     <h1>All Regions</h1>
     {{ regions }}
     <ul>

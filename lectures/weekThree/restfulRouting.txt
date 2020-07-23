@@ -1,0 +1,39 @@
+
+
+
+|   NAME   |     PATH       |     PATH         |   HTTP VERB     |   HTTP VERB     |            PURPOSE                   |
+|          |                |   Semi-Restful   |    Restful      |  Semi-Restful   |                                      |           
+|----------|----------------|------------------|-----------------|-----------------|--------------------------------------| 
+| Index    | /blog          | /blog            |      GET        |      GET        | Displays all blog post               |
+| New      | /blog/new      | /blog/new        |      GET        |      GET        | Shows new form for new blog entry    |
+| Create   | /blog          | /blog            |      POST       |      POST       | Creates a new blog post              |
+| Show     | /blog/:id      | /blog/:id        |      GET        |      GET        | Shows one specified blog post        |
+| Edit     | /blog/:id/edit | /blog/:id/edit   |      GET        |      GET        | Shows edit form for one blog post    |
+| Update   | /blog/:id      | /blog/:id        |      PUT        |      POST       | Updates a particular blog post       |
+| Destroy  | /blog/:id      | /blog/:id/delete |     DELETE      |      GET        | Deletes a particular blog post       |
+
+
+root route
+
+localhost:8000 /blog/1
+www.google.com/blog/1/editblog/:id/edit
+
+
+
+project urls    vs      app urls
+blog/   blog app        Index           ''
+                        New             'new'
+                        Create          ''
+                        Show            ':id'
+                        Edit            ':id/edit'
+                        Update          ':id'
+                        Destroy         ':id/delete'
+
+project urls    vs      app urls
+''                      Index           '/blog'         
+                        New             '/blog/new'     
+                        Create          '/blog'         
+                        Show            '/blog/:id'     
+                        Edit            '/blog/:id/edit'
+                        Update          '/blog/:id'
+                        Destroy         '/blog/:id'

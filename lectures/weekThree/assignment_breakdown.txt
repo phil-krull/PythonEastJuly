@@ -1,0 +1,55 @@
+6
+3 - GET
+3 - POST
+
+8
+3 - GET
+5 - POST
+
+
+1.) MODEL Setup
+
+USER
+first name
+last name
+email
+password
+created at
+updated at
+
+SECRET
+content
+user - FK - 1->M
+like - FK - M->M User
+created at
+updated at
+
+2.) GET Request
+Root        /                   log/reg
+Success     /secrets            Show recent secrets/create secret
+Show some   /popular_secrets    Show the most popular secrets
+
+like        /likes/secret_id    Make the connection with User-Secret - get user id from session(saved form either login/registration)
+delete      /secret/id          Delete secret
+
+
+<a href='/likes/5'>Like</a>
+
+
+3.) POST Request
+Secret create   /secretes/create    create post     redirect to /secrets
+registration    /users              create user     redirect a) Success page, b) errors -> route
+login           /users/login        login USER      redirect a) Success page, b) errors -> route
+
+4.) work on the creates9(POST)
+a.) Register  show user name
+b.) login   show user name
+c.) secret  show all secrets
+
+5.) likes
+6.) delete
+
+7 -> extra features
+    date formats(Django Humanize)
+    3 of likes
+    only show delete for login in user

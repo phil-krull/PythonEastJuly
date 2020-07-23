@@ -51,6 +51,26 @@ class SLL(object):
         # remove and return the last node of the list
         pass
 
+    def move_min_to_front(self):
+        # Input => 3->6->1->7->2->None
+        # Output => 1->3->6->7->2->None
+        pass
+
+    def move_max_to_back(self):
+        # Input => 3->6->1->7->2->None
+        # Output => 3->6->1->2->7->None
+        pass
+
+
+    def append(self, after_val, val):
+        # Input => (3->6->1->7->2->None, 6, 4)
+        # Output => 3->6->4->1->7->2->None
+        pass
+
+    def delete(self, val):
+        # Input => 3->6->1->7->2->None, 1
+        # Output => # 3->6->7->2->None
+
 
 
 

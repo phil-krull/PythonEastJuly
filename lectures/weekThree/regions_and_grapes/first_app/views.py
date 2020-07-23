@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Region, Grape, Producer
+from django.contrib import messages
 
 # Create your views here.
 def index(request):
@@ -59,9 +60,17 @@ def success(request):
     return render(request, 'process.html', context)
 
 def add_region(request):
-    print(request.POST)
-    region_created = Region.objects.create(name=request.POST['form_name'], latitude=request.POST['form_latitude'], longitude=request.POST['form_longitude'])
-    print(region_created)
+    print('request.POST', request.POST)
+    message_from_model = Region.objects.validate_region(request.POST)
+    print('model message in views', message_from_model)
+
+    if message_from_model['status'] == True:
+        region_created = Region.objects.create(name=request.POST['form_name'], latitude=request.POST['form_latitude'], longitude=request.POST['form_longitude'])
+        print(region_created)
+    else:
+        print(message_from_model['messages'])
+        for mess in message_from_model['messages']:
+            messages.error(request, mess)
 
     return redirect('/')
 
