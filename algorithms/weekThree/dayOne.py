@@ -36,3 +36,10 @@ class Queue():
 
 my_q = Queue()
 # 
+
+def QIsPalindrome(queue):
+    queue.isEmpty()
+    pass
+
+
+QIsPalindrome(my_q)
